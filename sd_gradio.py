@@ -62,4 +62,4 @@ if __name__ == '__main__':
         allow_flagging='never',
         title='Stable Diffusion in-painting')
 
-    demo.launch(share=True)
+    demo.launch(share=True, server_name="0.0.0.0")
