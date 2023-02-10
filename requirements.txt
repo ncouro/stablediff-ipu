@@ -1,0 +1,4 @@
+git+https://github.com/huggingface/optimum-graphcore.git
+gradio 
+pillow
+diffusers[torch]==0.9
