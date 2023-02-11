@@ -42,6 +42,7 @@ def generate(prompt, negative_prompt):
     # print(inputs['image'], inputs['mask'])
     global output
     output = pipe(prompt,
+                  negative_prompt=negative_prompt,
                   height=image_height,
                   width=image_width,
                   num_inference_steps=25,
@@ -60,6 +61,8 @@ if __name__ == '__main__':
             gr.Image(type="pil", )
         ],
         allow_flagging='never',
-        title='Stable Diffusion in-painting')
+        title='Stable Diffusion 2 txt2img')
 
-    demo.launch(share=True, server_name="0.0.0.0")
+    demo.launch(share=False, server_name="0.0.0.0")
+
+# docker build . -t ncouro0/stablediff-ipu:latest
